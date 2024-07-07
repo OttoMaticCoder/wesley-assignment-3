@@ -14,17 +14,21 @@ public class FileService {
 			int i = 0;
 			
 			while((line = fileReader.readLine()) != null) {
-				String[] element = line.split(",");
-				userList[i] = new User(element[0], element[1], element[2]);
+				String[] userData = line.split(",");
+						
+				String username = userData[0];
+				String password = userData[1];
+				String name = userData[2];
+				
+				User user = new User(username, password, name);
+				
+				userList[i] = user;
 				i++;
 				
-				
-				
-				System.out.println(line);
-				System.out.println(element);
 			}
-					
+			
 			return userList;
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
