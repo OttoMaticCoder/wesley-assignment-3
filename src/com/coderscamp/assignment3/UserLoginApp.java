@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 
-public class MainApp {
+public class UserLoginApp {
 	
 	public static void main(String[] args) {
 		
@@ -43,8 +43,7 @@ public class MainApp {
 				System.out.println("Invalid login, try again");
 				loginAttempts++;
 				
-				
-				
+
 			}	
 		}	
 	}
